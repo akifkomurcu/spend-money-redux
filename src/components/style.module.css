@@ -1,0 +1,10 @@
+.layout {
+    width: 100%;
+    display: grid;
+    grid:
+      "header" auto
+      "main" auto
+      "footer" auto
+      / auto;
+    background-color:  #F1F2F6;
+  }

@@ -1,0 +1,56 @@
+
+  .main 
+  { 
+    grid-area: main; 
+    margin: 0 auto;
+  }
+.money{
+  
+  height: 77px;
+  width: 1000px;
+  margin-bottom: 10px;
+  position: sticky;
+  top: 0px;
+  display: block;
+  z-index: 9999;
+  background-color: rgb(108, 128, 146);
+  text-align: center;
+}
+.products{
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  
+}
+.card{
+  margin: 3px;
+  height: 302px;
+  width: 326px;
+  background-color: white;
+  max-width: 100%;
+  font-size: 18px;
+  text-align: center;
+
+}
+.img{
+  height: 120px;
+  width: 136px;
+}
+.prodName{
+  
+  font-size: 22px;
+  font-weight: 700;
+  height: 26px;
+  width: 296px;
+  margin: 0 auto;
+  font-family: sans-serif;
+
+}
+.prodPrice{
+  font-size: 20px;
+  color: #24C486;
+  height: 23px;
+  width: 296px;
+  margin: 0 auto;
+  text-decoration:  none solid rgb(36, 196, 134);
+}
