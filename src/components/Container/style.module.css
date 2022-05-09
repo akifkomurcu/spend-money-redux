@@ -16,6 +16,12 @@
   background-color: rgb(108, 128, 146);
   text-align: center;
 }
+.MoneyText{
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 15px;
+}
 .products{
   margin-top: 10px;
   display: grid;
@@ -33,8 +39,9 @@
 
 }
 .img{
-  height: 120px;
-  width: 136px;
+  height: 160px;
+  width: 100%;
+  object-fit:contain;
 }
 .prodName{
   
@@ -53,4 +60,38 @@
   width: 296px;
   margin: 0 auto;
   text-decoration:  none solid rgb(36, 196, 134);
+}
+
+.sellButton{
+  color: #333;
+  background: #f1f2f6 !important;
+  cursor: pointer;
+  padding: 10px 12px;
+  margin-left: 3px;
+  border-radius: 3px;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  margin-right: 3px;
+}
+.input{
+  height: 38px;
+  width: 120px;
+  border: 1px solid #B2BEC3;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.buyButton{
+  background: linear-gradient(180deg,#2ecc71,#1abc9c);
+  cursor: pointer;
+  padding: 10px 12px;
+  margin-left: 3px;
+  border-radius: 3px;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
 }
