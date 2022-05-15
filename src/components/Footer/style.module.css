@@ -1,27 +1,29 @@
-.footer { 
-    grid-area: footer; 
-    background-color: white;
-    height: 180px;
-    width: 1000px;
-    margin: 0 auto;
-    margin-bottom: 30px;
+.footer {
+  grid-area: footer;
+  background-color: white;
+  height: 180px;
+  width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
-.ListTitle{
-    width: 100px;
-    margin: 0 auto;
+.ListTitle {
+  width: 100px;
+  margin: 0 auto;
 }
-.item{
-    display: flex;
-    justify-content: center;
+.item {
+  display: flex;
+  justify-content: center;
 }
-.itemName{
-    margin-right: 5px;
+.itemName {
+  margin-right: 5px;
 }
-.ItemAmount{
-    margin-right: 5px;
+.ItemAmount {
+  margin-right: 5px;
 }
-.Total{
- margin-left: 380px; 
-
-
+.Total {
+  margin-left: 380px;
+  display: flex;
+}
+.TotalCost {
+  margin-left: 100px;
 }

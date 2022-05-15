@@ -1,11 +1,8 @@
-
-  .main 
-  { 
-    grid-area: main; 
-    margin: 0 auto;
-  }
-.money{
-  
+.main {
+  grid-area: main;
+  margin: 0 auto;
+}
+.money {
   height: 77px;
   width: 1000px;
   margin-bottom: 10px;
@@ -13,22 +10,21 @@
   top: 0px;
   display: block;
   z-index: 9999;
-  background-color: rgb(108, 128, 146);
+  background: linear-gradient(180deg, #2ecc71, #1abc9c);
   text-align: center;
 }
-.MoneyText{
+.MoneyText {
   font-size: 32px;
   font-weight: 700;
   text-align: center;
   padding-top: 15px;
 }
-.products{
+.products {
   margin-top: 10px;
   display: grid;
   grid-template-columns: auto auto auto;
-  
 }
-.card{
+.card {
   margin: 3px;
   height: 302px;
   width: 326px;
@@ -36,33 +32,42 @@
   max-width: 100%;
   font-size: 18px;
   text-align: center;
-
 }
-.img{
+.img {
   height: 160px;
   width: 100%;
-  object-fit:contain;
+  object-fit: contain;
 }
-.prodName{
-  
+.prodName {
   font-size: 22px;
   font-weight: 700;
   height: 26px;
   width: 296px;
   margin: 0 auto;
   font-family: sans-serif;
-
 }
-.prodPrice{
+.prodPrice {
   font-size: 20px;
-  color: #24C486;
+  color: #24c486;
   height: 23px;
   width: 296px;
   margin: 0 auto;
-  text-decoration:  none solid rgb(36, 196, 134);
+  text-decoration: none solid rgb(36, 196, 134);
 }
 
-.sellButton{
+.sellButton {
+  color: rgb(255, 255, 255);
+  background: #9e4c1d !important;
+  cursor: pointer;
+  padding: 10px 12px;
+  margin-left: 3px;
+  border-radius: 3px;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  margin-right: 3px;
+}
+.sellButtonInactive {
   color: #333;
   background: #f1f2f6 !important;
   cursor: pointer;
@@ -73,19 +78,20 @@
   font-weight: 700;
   font-size: 16px;
   margin-right: 3px;
+  pointer-events: none;
 }
-.input{
+.input {
   height: 38px;
   width: 120px;
-  border: 1px solid #B2BEC3;
+  border: 1px solid #b2bec3;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.buyButton{
-  background: linear-gradient(180deg,#2ecc71,#1abc9c);
+.buyButton {
+  background: linear-gradient(180deg, #2ecc71, #1abc9c);
   cursor: pointer;
   padding: 10px 12px;
   margin-left: 3px;
