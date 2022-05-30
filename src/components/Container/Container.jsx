@@ -3,7 +3,7 @@ import style from "./style.module.css";
 import { itemSlice, setProds, setId, DeleteProd } from "../../redux/itemSlice";
 import { useSelector, useDispatch } from "react-redux";
 import productsData from "../../products.json";
-
+import NumberFormat from "react-number-format";
 function Container() {
   const sellButton = useSelector((state) => state.items.sellButton);
   const id = useSelector((state) => state.items.id);
@@ -15,22 +15,22 @@ function Container() {
 
   const buyClick = (e) => {
     dispatch(setProds(e.target.value));
-    setInputVal();
-  };
-  const setInputVal = () => {
-    prods.filter((prod) =>
-      prod.id === id ? inputHandler(prods[0].quantity) : 1
-    );
-  };
-
-  const inputHandler = (sonuc) => {
-    setInput(sonuc);
   };
 
   return (
     <div className={style.main}>
       <div className={style.money}>
-        <div className={style.MoneyText}>${money}</div>
+        <div className={style.MoneyText}>
+          {" "}
+          <NumberFormat
+            value={money}
+            className="foo"
+            displayType={"text"}
+            thousandSeparator={true}
+            prefix={"$"}
+            renderText={(value, props) => <div {...props}>{value}</div>}
+          />
+        </div>
       </div>
 
       <div className={style.products}>
@@ -41,7 +41,18 @@ function Container() {
             </div>
             <div className={style.prodNameArea}>
               <div className={style.prodName}> {item.ProdName} </div>
-              <div className={style.prodPrice}> ${item.ProdPrice} </div>
+              <div className={style.prodPrice}>
+                {
+                  <NumberFormat
+                    value={item.ProdPrice}
+                    className="foo"
+                    displayType={"text"}
+                    thousandSeparator={true}
+                    prefix={"$"}
+                    renderText={(value, props) => <div {...props}>{value}</div>}
+                  />
+                }
+              </div>
             </div>
             <div className={style.buttonsArea}>
               <button
@@ -59,7 +70,6 @@ function Container() {
                 className={style.input}
                 type="number"
                 value={item.quantity}
-                onChange={inputHandler}
               />
               <button
                 className={style.buyButton}
