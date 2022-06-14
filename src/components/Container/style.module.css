@@ -81,16 +81,19 @@
   margin-right: 3px;
   pointer-events: none;
 }
+.buttonsArea {
+  display: flex;
+  justify-content: center;
+}
 .input {
   height: 38px;
   width: 120px;
   border: 1px solid #b2bec3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
+
 .buyButton {
   background: linear-gradient(180deg, #2ecc71, #1abc9c);
   cursor: pointer;

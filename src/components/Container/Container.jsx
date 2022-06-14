@@ -1,15 +1,13 @@
 import { useState } from "react";
 import style from "./style.module.css";
-import { itemSlice, setProds, setId, DeleteProd } from "../../redux/itemSlice";
+import { setProds, DeleteProd } from "../../redux/itemSlice";
 import { useSelector, useDispatch } from "react-redux";
 import productsData from "../../products.json";
 import NumberFormat from "react-number-format";
 function Container() {
-  const sellButton = useSelector((state) => state.items.sellButton);
-  const id = useSelector((state) => state.items.id);
   const prods = useSelector((state) => state.items.prods);
   const money = useSelector((state) => state.items.money);
-  const sayac = useSelector((state) => state.items.sayac);
+
   const [input, setInput] = useState(0);
   const dispatch = useDispatch();
 
@@ -66,11 +64,11 @@ function Container() {
               >
                 Sell
               </button>
-              <input
-                className={style.input}
-                type="number"
-                value={item.quantity}
-              />
+              <div className={style.input} id={item.id}>
+                {prods.map((prod) =>
+                  prod.id === item.id ? prod.quantity : ""
+                )}
+              </div>
               <button
                 className={style.buyButton}
                 value={item.id}
